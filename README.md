@@ -4,6 +4,10 @@ A simple 2D game where the player navigates a labyrinth, collecting items (guard
 
 ---
 
+![Screenshot](quit_game_2d.jpg)
+
+---
+
 ## ✨ Game Features
 
 * **Gameplay:** Navigate a labyrinth, collect all items (Squid Game guard figures) to unlock the exit.
@@ -108,10 +112,3 @@ The game keeps track of player names and times in a `player_data.txt` file.
 
 * Compilation is managed by `Makefile`.
 
----
-
-## 📷 Screenshots
-
-![Screenshot](quit_game_2d.jpg)
-
----
