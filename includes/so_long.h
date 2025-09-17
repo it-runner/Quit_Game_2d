@@ -6,7 +6,7 @@
 /*   By: so_long <so_long@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 17:23:08 by so_long           #+#    #+#             */
-/*   Updated: 2025/09/17 10:48:35 by so_long          ###   ########.fr       */
+/*   Updated: 2025/09/17 16:15:37 by so_long          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 // =========================================================================
 
 // number of game levels and all available maps
-# define TOTAL_LEVELS 3
+# define TOTAL_LEVELS 8
 # define ALL_AVAILABLE_MAPS 8
 
 // move delay in ms
