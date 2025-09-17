@@ -112,6 +112,6 @@ The game keeps track of player names and times in a `player_data.txt` file.
 
 ## 📷 Screenshots
 
-*(Optional – add screenshots or GIFs here for better presentation)*
+https://github.com/it-runner/Quit_Game_2d/blob/main/quit_game_2d.jpg?raw=true
 
 ---
