@@ -6,13 +6,13 @@
 /*   By: so_long <so_long@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 12:34:11 by so_long           #+#    #+#             */
-/*   Updated: 2025/09/17 10:46:28 by so_long          ###   ########.fr       */
+/*   Updated: 2025/09/21 11:55:56 by so_long          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static void	ft_write_player_entry(int fd, t_player_data *player)
+void	ft_write_player_entry(int fd, t_player_data *player)
 {
 	int			i;
 	int			j;
@@ -39,54 +39,6 @@ static void	ft_write_player_entry(int fd, t_player_data *player)
 	}
 	numbuf[i++] = '\n';
 	write(fd, numbuf, i);
-}
-
-// process a single line and write it or updated player entry to the file
-static int	ft_process_line(int fd, t_game *game, char *line)
-{
-	char	*sep;
-	char	*existing_name;
-	char	tmp;
-	int		player_found;
-
-	sep = ft_strchr(line, '|');
-	if (sep)
-	{
-		tmp = *sep;
-		*sep = '\0';
-		existing_name = ft_strdup(line);
-		*sep = tmp;
-	}
-	else
-		existing_name = ft_strdup(line);
-	player_found = 0;
-	if (existing_name && ft_strncmp(existing_name, game->player_data.name,
-			ft_strlen(game->player_data.name)) == 0)
-	{
-		ft_write_player_entry(fd, &game->player_data);
-		player_found = 1;
-	}
-	else
-		write(fd, line, ft_strlen(line));
-	return (free(existing_name), player_found);
-}
-
-// process all lines, replace matching player entry and write them to file
-static int	ft_process_lines_and_write(int fd, t_game *game, char **lines,
-	int count)
-{
-	int		i;
-	int		player_found;
-
-	i = 0;
-	player_found = 0;
-	while (i < count)
-	{
-		player_found |= ft_process_line(fd, game, lines[i]);
-		free(lines[i]);
-		i++;
-	}
-	return (player_found);
 }
 
 // save game player data to a temporary file

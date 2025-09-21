@@ -6,7 +6,7 @@
 #    By: so_long <so_long@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/21 11:59:59 by so_long           #+#    #+#              #
-#    Updated: 2025/09/17 10:48:51 by so_long          ###   ########.fr        #
+#    Updated: 2025/09/21 11:52:19 by so_long          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRC_FILES				=	check_map.c 									\
 							parsing.c										\
 							player.c 										\
 							player_default.c								\
+							player_line_write.c								\
 							player_utils_01.c								\
 							player_utils_02.c								\
 							start_game.c									\
