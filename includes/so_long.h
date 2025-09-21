@@ -6,7 +6,7 @@
 /*   By: so_long <so_long@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 17:23:08 by so_long           #+#    #+#             */
-/*   Updated: 2025/09/17 16:15:37 by so_long          ###   ########.fr       */
+/*   Updated: 2025/09/21 12:17:24 by so_long          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -374,7 +374,12 @@ void			ft_print_name_prompt(void);
 // player_defaults.c
 void			ft_set_default_player_name(t_game *game);
 
+// player_line_write.c
+int				ft_process_lines_and_write(int fd, t_game *game, char **lines,
+					int count);
+
 // player_utils_01.c
+void			ft_write_player_entry(int fd, t_player_data *player);
 int				ft_save_player_data_temp(t_game *game, char **lines, int count);
 int				ft_handle_player_input(t_game *game, char *input,
 					int bytes_read);
