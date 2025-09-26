@@ -111,6 +111,10 @@ typedef struct s_character
 	int						moving_down;		// down movement flag (1/0)
 	int						moving_left;		// left movement flag (1/0)
 	int						moving_right;		// right movement flag (1/0)
+	int						up_pressed;			// up key press flag (1/0)
+	int						down_pressed;		// down key press flag (1/0)
+	int						left_pressed;		// left key press flag (1/0)
+	int						right_pressed;		// right key press flag (1/0)
 }	t_character;
 
 /* -----------------------------------------------------------
@@ -268,11 +272,16 @@ int				ft_error(t_game *game, char *err_msg);
 int				ft_nomap_error(t_game *game, char *err_msg);
 
 // events_hook.c
+int				ft_key_press(int keycode, t_game *game);
+int				ft_key_release(int keycode, t_game *game);
 int				ft_game_loop(t_game *game);
 
 // events_hook_utils.c
-int				ft_key_press(int keycode, t_game *game);
-int				ft_key_release(int keycode, t_game *game);
+void			ft_handle_instant_move(t_game *game, long long t);
+void			ft_handle_continuous_move(t_game *game, long long t);
+void			ft_update_info_panel(t_game *game, long long t);
+void			ft_handle_movement_keys(int keycode, t_game *game);
+void			ft_handle_special_keys(int keycode, t_game *game);
 
 // flood_fill.c
 void			ft_flood_fill(t_game *game, t_map size, t_character charpos,
