@@ -51,6 +51,10 @@ int	ft_init_char(t_game *game)
 	game->player.moving_down = 0;
 	game->player.moving_left = 0;
 	game->player.moving_right = 0;
+	game->player.up_pressed = 0;
+	game->player.down_pressed = 0;
+	game->player.left_pressed = 0;
+	game->player.right_pressed = 0;
 	return (1);
 }
 
