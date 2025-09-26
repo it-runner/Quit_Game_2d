@@ -22,6 +22,7 @@ SRC_FILES				=	check_map.c 									\
 							elem_ready.c 									\
 							error.c											\
 							events_hook.c									\
+							events_hook_utils.c								\
 							flood_fill.c									\
 							flood_fill_utils.c								\
 							ft_xpm.c										\
