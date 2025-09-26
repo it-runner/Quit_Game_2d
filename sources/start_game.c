@@ -17,6 +17,7 @@ static void	ft_init_game_display(t_game *game)
 {
 	ft_render_map(game);
 	ft_display_info_panel(game);
+	mlx_do_sync(game->show.mlx_ptr);
 	mlx_hook(game->show.win_ptr, KeyPress, KeyPressMask, ft_key_press, game);
 	mlx_hook(game->show.win_ptr, KeyRelease, KeyReleaseMask,
 		ft_key_release, game);
